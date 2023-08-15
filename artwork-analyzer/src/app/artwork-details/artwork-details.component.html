@@ -1,0 +1,16 @@
+<mat-card class="details-card">
+    <mat-card-header>
+      <mat-card-title>Artwork Analysis Results</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="analysisResult">
+        <img [src]="artwork.imageUrl" alt="Artwork">
+        <p><strong>Predicted Genre/Style:</strong> {{ analysisResult.genre }}</p>
+        <p><strong>Confidence:</strong> {{ analysisResult.confidence }}</p>
+      </div>
+      <div *ngIf="!analysisResult">
+        <p>No analysis results available.</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
